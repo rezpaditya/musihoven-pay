@@ -16,6 +16,7 @@
 		F6BC86F62BEFE69500C8070D /* MusihovenSumUpAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC86F52BEFE69500C8070D /* MusihovenSumUpAppTests.swift */; };
 		F6BC87002BEFE69500C8070D /* MusihovenSumUpAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC86FF2BEFE69500C8070D /* MusihovenSumUpAppUITests.swift */; };
 		F6BC87022BEFE69500C8070D /* MusihovenSumUpAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC87012BEFE69500C8070D /* MusihovenSumUpAppUITestsLaunchTests.swift */; };
+		F6BC87102BEFE6AC00C8070D /* SumUpSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F6BC870F2BEFE6AC00C8070D /* SumUpSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6BC87102BEFE6AC00C8070D /* SumUpSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = MusihovenSumUpApp;
+			packageProductDependencies = (
+				F6BC870F2BEFE6AC00C8070D /* SumUpSDK */,
+			);
 			productName = MusihovenSumUpApp;
 			productReference = F6BC86DB2BEFE69300C8070D /* MusihovenSumUpApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = F6BC86D22BEFE69300C8070D;
+			packageReferences = (
+				F6BC870E2BEFE6AC00C8070D /* XCRemoteSwiftPackageReference "sumup-ios-sdk" */,
+			);
 			productRefGroup = F6BC86DC2BEFE69300C8070D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -445,11 +453,11 @@
 				DEVELOPMENT_TEAM = 783Q5D7Q7F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MusihovenSumUpApp/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Musihoven SumUp App membutuhkan access bluetooth untuk koneksi dengan card reader device";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,11 +481,11 @@
 				DEVELOPMENT_TEAM = 783Q5D7Q7F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MusihovenSumUpApp/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Musihoven SumUp App membutuhkan access bluetooth untuk koneksi dengan card reader device";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +615,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6BC870E2BEFE6AC00C8070D /* XCRemoteSwiftPackageReference "sumup-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sumup/sumup-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6BC870F2BEFE6AC00C8070D /* SumUpSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6BC870E2BEFE6AC00C8070D /* XCRemoteSwiftPackageReference "sumup-ios-sdk" */;
+			productName = SumUpSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6BC86D32BEFE69300C8070D /* Project object */;
 }
